@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Harvest & Spoon | Easy Home Recipes</title>
+  <meta name="description" content="Discover easy, delicious home recipes at Harvest & Spoon. SEO-friendly recipe website with beautiful images, clear navigation, and legal pages." />
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="Harvest & Spoon" />
+  <link rel="canonical" href="https://example.com/" />
+  <meta property="og:title" content="Harvest & Spoon | Easy Home Recipes" />
+  <meta property="og:description" content="Explore delicious home recipes with beautiful images and a clean, Google Ads-friendly layout." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1490645935967-10de6ba17061?q=80&w=1200&auto=format&fit=crop" />
+  <style>
+    :root{
+      --brand:#2f855a;
+      --brand-dark:#276749;
+      --text:#1f2937;
+      --muted:#6b7280;
+      --bg:#ffffff;
+      --light:#f8fafc;
+      --border:#e5e7eb;
+      --max:1120px;
+      --radius:14px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Arial, Helvetica, sans-serif;
+      color:var(--text);
+      background:var(--bg);
+      line-height:1.7;
+    }
+    a{text-decoration:none;color:inherit}
+    img{max-width:100%;display:block}
+    .container{max-width:var(--max);margin:0 auto;padding:0 16px}
+
+    .topbar{
+      background:#111827;
+      color:#fff;
+      text-align:center;
+      font-size:13px;
+      padding:8px 0;
+    }
+
+    header{
+      background:#fff;
+      border-bottom:1px solid var(--border);
+      position:sticky;
+      top:0;
+      z-index:20;
+    }
+    .nav{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      padding:14px 0;
+    }
+    .logo{
+      font-weight:800;
+      font-size:24px;
+      color:var(--brand);
+    }
+    .menu a{
+      margin-left:18px;
+      color:#374151;
+      font-weight:600;
+    }
+    .menu a:hover{color:var(--brand)}
+
+    .hero{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:24px;
+      align-items:center;
+      padding:36px 0;
+    }
+    .hero h1{
+      font-size:42px;
+      line-height:1.1;
+      margin:0 0 14px;
+    }
+    .hero p{
+      color:var(--muted);
+      margin:0 0 18px;
+      font-size:17px;
+    }
+    .btn{
+      display:inline-block;
+      background:var(--brand);
+      color:#fff;
+      padding:12px 20px;
+      border-radius:10px;
+      font-weight:700;
+    }
+    .btn:hover{background:var(--brand-dark)}
+    .hero img{
+      width:100%;
+      height:520px;
+      object-fit:cover;
+      border-radius:var(--radius);
+      background:#eee;
+    }
+
+    .section{padding:36px 0}
+    .section h2{
+      font-size:28px;
+      margin:0 0 10px;
+    }
+    .section .sub{
+      color:var(--muted);
+      margin:0 0 20px;
+    }
+
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:18px;
+    }
+    .card{
+      border:1px solid var(--border);
+      border-radius:var(--radius);
+      overflow:hidden;
+      background:#fff;
+      transition:0.2s ease;
+    }
+    .card:hover{box-shadow:0 8px 24px rgba(0,0,0,.06)}
+    .card img{
+      width:100%;
+      height:260px;
+      object-fit:cover;
+      background:#f3f4f6;
+    }
+    .card .body{
+      padding:14px;
+    }
+    .card h3{
+      margin:0 0 6px;
+      font-size:18px;
+    }
+    .card p{
+      margin:0;
+      color:var(--muted);
+      font-size:14px;
+    }
+
+    .content{
+      background:var(--light);
+      border:1px solid var(--border);
+      border-radius:var(--radius);
+      padding:28px;
+    }
+    .content p{margin:0 0 14px}
+    .content p:last-child{margin-bottom:0}
+
+    .categories{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:16px;
+    }
+    .cat{
+      border:1px solid var(--border);
+      border-radius:var(--radius);
+      padding:18px;
+      background:#fff;
+      text-align:center;
+    }
+    .cat strong{
+      display:block;
+      margin-top:8px;
+      color:var(--brand);
+    }
+
+    footer{
+      background:#111827;
+      color:#d1d5db;
+      margin-top:40px;
+    }
+    .footer-grid{
+      display:grid;
+      grid-template-columns:2fr 1fr 1fr;
+      gap:24px;
+      padding:32px 0;
+    }
+    .footer-grid h4{
+      color:#fff;
+      margin:0 0 10px;
+    }
+    .footer-grid a{
+      display:block;
+      color:#d1d5db;
+      margin:6px 0;
+    }
+    .footer-grid a:hover{color:#fff}
+    .copyright{
+      border-top:1px solid #374151;
+      padding:12px 0;
+      text-align:center;
+      font-size:13px;
+      color:#9ca3af;
+    }
+
+    @media(max-width:900px){
+      .hero{grid-template-columns:1fr}
+      .hero img{height:360px}
+      .grid{grid-template-columns:1fr}
+      .categories{grid-template-columns:1fr 1fr}
+      .footer-grid{grid-template-columns:1fr}
+      .hero h1{font-size:32px}
+    }
+    @media(max-width:600px){
+      .menu a{margin-left:10px;font-size:14px}
+      .categories{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar">Fresh recipes, clear navigation, secure pages, and a clean experience for every visitor.</div>
+
+  <header>
+    <div class="container nav">
+      <a class="logo" href="/">Harvest & Spoon</a>
+      <nav class="menu">
+        <a href="/">Home</a>
+        <a href="recipes.html">Recipes</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div>
+        <h1>Delicious Home Recipes Made Simple</h1>
+        <p>Welcome to Harvest & Spoon, a clean and modern recipe website built for food lovers who want easy, reliable, and family-friendly meals. Explore beautifully presented recipes, helpful cooking tips, and straightforward guidance that makes cooking at home more enjoyable.</p>
+        <a class="btn" href="recipes.html">Browse Recipes</a>
+      </div>
+      <img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?q=80&w=1200&auto=format&fit=crop" alt="Delicious homemade recipe on a plate" loading="eager" />
+    </section>
+
+    <section class="section">
+      <h2>Popular Categories</h2>
+      <p class="sub">Easy-to-browse sections for quick meal inspiration.</p>
+      <div class="categories">
+        <div class="cat">🍳<strong>Breakfast</strong></div>
+        <div class="cat">🥗<strong>Healthy Meals</strong></div>
+        <div class="cat">🍲<strong>Dinner</strong></div>
+        <div class="cat">🍰<strong>Desserts</strong></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Featured Recipes</h2>
+      <p class="sub">A few of our most loved recipe ideas.</p>
+      <div class="grid">
+        <article class="card">
+          <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=900&auto=format&fit=crop" alt="Healthy bowl recipe" loading="lazy" />
+          <div class="body">
+            <h3>Fresh Veggie Bowl</h3>
+            <p>A colorful and nourishing bowl with simple ingredients and bold flavor.</p>
+          </div>
+        </article>
+        <article class="card">
+          <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=900&auto=format&fit=crop" alt="Family dinner recipe" loading="lazy" />
+          <div class="body">
+            <h3>Homestyle Pasta Dinner</h3>
+            <p>A comforting dinner recipe ideal for busy weeknights and family meals.</p>
+          </div>
+        </article>
+        <article class="card">
+          <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=900&auto=format&fit=crop" alt="Dessert recipe plate" loading="lazy" />
+          <div class="body">
+            <h3>Simple Sweet Dessert</h3>
+            <p>Easy dessert inspiration with elegant presentation and satisfying taste.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Welcome to Harvest & Spoon</h2>
+      <div class="content">
+        <p>Harvest & Spoon is a recipe website built for everyday home cooks, busy families, and anyone who enjoys preparing tasty meals without complicated steps. Our goal is to make cooking feel approachable, enjoyable, and rewarding by offering recipes that are simple to follow, visually appealing, and practical for real-life kitchens. Whether you are looking for a quick breakfast, a healthy lunch, a comforting dinner, or a sweet treat to share with guests, this site is designed to help you find ideas that fit your lifestyle and your schedule.</p>
+        <p>We believe that good food should not require professional-level skills or expensive ingredients. That is why our recipes focus on accessible pantry staples, clear instructions, and easy preparation. Each recipe is written with the home cook in mind, so you can move through the process with confidence. We want visitors to feel inspired to cook more often, try new flavors, and build a routine that makes meals feel less stressful and more enjoyable. When people can trust a recipe to work well, they are far more likely to return and try another dish, which is exactly the kind of experience we want to create.</p>
+        <p>Our website is also built with search engine optimization in mind. That means the pages are structured with clear headings, descriptive titles, and helpful content so search engines can understand what each page is about. This makes it easier for people searching for recipes online to discover Harvest & Spoon. We use useful keywords naturally, create organized categories, and ensure that every page is accessible and easy to navigate. A strong SEO structure helps your content reach more users while also making the website cleaner and easier to browse.</p>
+        <p>Because trust matters, we keep the website transparent and user-friendly. All important pages such as the Privacy Policy, Disclaimer, Terms & Conditions, Shipping Policy, and Refund Policy are available on separate pages, even though this is a recipe website rather than a store. This kind of structure builds credibility, keeps the site professional, and gives visitors access to important legal information whenever they need it. It also supports Google Ads friendliness by keeping the website compliant, clear, and free from misleading or hidden information.</p>
+        <p>The visual design of Harvest & Spoon is clean, modern, and focused on food imagery that looks appetizing without being overwhelming. High-quality photos help visitors understand the meal and get excited to cook it. We recommend using optimized image files so the website stays fast and smooth, which is important for both SEO and user experience. Broken images or slow pages can frustrate visitors and hurt rankings, so the site is designed to avoid those problems by using reliable image sources and proper formatting.</p>
+        <p>At Harvest & Spoon, we also recognize that visitors come from different backgrounds and skill levels. Some people need beginner-friendly recipes with only a few ingredients, while others want more detailed guides for special occasions or family dinners. By offering a range of recipe types and helpful explanations, the site can serve a broad audience without becoming cluttered or difficult to use. Our content is meant to be warm, trustworthy, and useful — the kind of recipe content people bookmark and return to again and again.</p>
+        <p>Another important part of this website is compliance with advertising standards. If you plan to monetize the site through Google Ads, the site should avoid misleading claims, harmful content, or deceptive layouts. It should clearly identify what the site offers, provide accessible contact information, and make policy pages easy to find. Harvest & Spoon follows that structure, making it a strong foundation for ad-friendly monetization while still delivering a pleasant browsing experience. Transparency and quality are essential if you want both search engines and advertisers to trust your site.</p>
+        <p>Ultimately, Harvest & Spoon is more than a recipe collection. It is a helpful home cooking destination designed to provide inspiration, guidance, and trust. Whether someone is planning a weeknight meal or searching for something special to make on the weekend, the site aims to deliver recipes that are practical, beautiful, and rewarding. We hope visitors enjoy browsing, cooking, and sharing meals with the people they love. Thank you for visiting Harvest & Spoon, and we hope it becomes one of your favorite places to discover new recipes online.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-grid">
+      <div>
+        <h4>Harvest & Spoon</h4>
+        <p>Easy, reliable, and beautiful recipes for everyday home cooks.</p>
+      </div>
+      <div>
+        <h4>Pages</h4>
+        <a href="/">Home</a>
+        <a href="recipes.html">Recipes</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div>
+        <h4>Legal</h4>
+        <a href="privacy-policy.html">Privacy Policy</a>
+        <a href="disclaimer.html">Disclaimer</a>
+        <a href="terms-and-conditions.html">Terms & Conditions</a>
+        <a href="refund-and-returns.html">Refund & Returns</a>
+        <a href="shipping-policy.html">Shipping Policy</a>
+      </div>
+    </div>
+    <div class="copyright">© 2026 Harvest & Spoon. All rights reserved.</div>
+  </footer>
+</body>
+</html>
